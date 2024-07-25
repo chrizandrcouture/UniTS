@@ -105,7 +105,7 @@ torchrun --nnodes 1 --master_port $random_port run.py \
   --debug $wandb_mode \
   --project_name $ptune_name \
   --clip_grad 100 \
-  --pretrained_weight auto \ # Path of pretrained ckpt, you must add it for prompt learning 
+  --pretrained_weight auto \ # Path of pretrained ckpt, you must add it for prompt learning
   --task_data_config_path  data_provider/multi_task.yaml # Important: Change to your_own_data_config.yaml
 ```
 

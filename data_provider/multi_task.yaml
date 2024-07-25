@@ -208,7 +208,7 @@ task_dataset:
     enc_in: 862
     dec_in: 862
     c_out: 862
-  
+
   LTF_Traffic_p336:
     task_name: long_term_forecast
     dataset: Traffic
@@ -238,7 +238,7 @@ task_dataset:
     enc_in: 862
     dec_in: 862
     c_out: 862
-  
+
   LTF_Weather_p96:
     task_name: long_term_forecast
     dataset: Weather

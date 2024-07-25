@@ -135,7 +135,7 @@ if __name__ == '__main__':
                 args.d_model,
                 args.e_layers,
                 args.des, ii)
-
+            print
             exp = Exp(args)  # set experiments
             print('>>>>>>>start training : {}>>>>>>>>>>>>>>>>>>>>>>>>>>'.format(setting))
             exp.train(setting)

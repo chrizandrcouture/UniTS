@@ -252,6 +252,16 @@ class Exp_All_Task(object):
                 print("\titers: {0}, epoch: {1} | lr: {2:.5} | loss_avg: {3} | current_loss: {4} |current data: {5}".format(
                     i + 1, epoch + 1, lr_schedule[it], loss_sum_display/(i+1), loss.item() * acc_it, task_name), folder=self.path)
 
+            if (i + 1) % 5000 == 0 and is_main_process():
+                save_dict = {
+                    'student': self.model.state_dict(),
+                    'optimizer': model_optim.state_dict(),
+                    'epoch': epoch + 1,
+                    'args': self.args,
+                }
+
+                torch.save(save_dict, self.path + '/' + f'pretrain_checkpoint_{it}.pth')
+
         if is_main_process():
             print("Epoch: {} cost time: {}".format(
                 epoch + 1, time.time() - epoch_time), folder=self.path)

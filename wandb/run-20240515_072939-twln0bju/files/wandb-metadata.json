@@ -1,0 +1,111 @@
+{
+    "os": "Linux-5.15.0-1056-aws-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2024-05-15T07:29:39.546360",
+    "startedAt": "2024-05-15T07:29:39.157465",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--is_training",
+        "1",
+        "--model_id",
+        "UniTS_pretrain_x128",
+        "--model",
+        "UniTS",
+        "--lradj",
+        "prompt_tuning",
+        "--prompt_num",
+        "10",
+        "--patch_len",
+        "16",
+        "--stride",
+        "16",
+        "--e_layers",
+        "3",
+        "--d_model",
+        "128",
+        "--des",
+        "Exp",
+        "--itr",
+        "1",
+        "--learning_rate",
+        "3e-3",
+        "--weight_decay",
+        "0",
+        "--prompt_tune_epoch",
+        "2",
+        "--train_epochs",
+        "0",
+        "--acc_it",
+        "32",
+        "--debug",
+        "online",
+        "--project_name",
+        "prompt_tuning",
+        "--clip_grad",
+        "100",
+        "--pretrained_weight",
+        "auto",
+        "--task_data_config_path",
+        "data_provider/multi_task.yaml"
+    ],
+    "state": "running",
+    "program": "run.py",
+    "codePathLocal": "run.py",
+    "codePath": "run.py",
+    "git": {
+        "remote": "https://github.com/mims-harvard/UniTS.git",
+        "commit": "ce20ae50bb3c48da021f2871d8cb204eaf070ae6"
+    },
+    "email": "chris.andrew@cai-solutions.com",
+    "root": "/data/chris/UniTS",
+    "host": "ip-172-31-79-58",
+    "username": "chris",
+    "executable": "/data/chris/venv/bin/python",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 3021.513,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2499.996,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3200.081,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3192.794,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3199.956,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 61.84368133544922,
+            "used": 35.24612808227539
+        }
+    },
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla T4",
+            "memory_total": 16106127360
+        }
+    ],
+    "memory": {
+        "total": 15.325733184814453
+    }
+}
